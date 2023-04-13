@@ -1,3 +1,5 @@
+require './nameable'
+
 class Person
   attr_reader :id
   attr_accessor :name, :age
@@ -15,6 +17,10 @@ class Person
     false
   end
 
+  def correct_name
+    @name
+  end
+
   private
 
   def of_age?
@@ -23,10 +29,3 @@ class Person
     false
   end
 end
-
-person = Person.new(23, 'Shakir')
-
-puts "Person : #{person.name}"
-puts "Age : #{person.age}"
-puts "Use Services? : #{person.can_use_services?}"
-puts

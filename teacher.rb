@@ -12,8 +12,3 @@ class Teacher < Person
     true
   end
 end
-
-teacher = Teacher.new(15, 'Mike', 'Maths')
-puts "Teacher: #{teacher.name}"
-puts "Specialization : #{teacher.specialization}"
-puts "Use Services? : #{teacher.can_use_services?}"
