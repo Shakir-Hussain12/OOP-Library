@@ -85,7 +85,7 @@ class App
     if rentals.length.positive?
       puts 'List of IDs : '
       @rentals.each do |rental|
-        puts rental.person.id.to_s if rental.person.id
+        puts rental.person.id if rental.person.id
       end
       print 'Select an ID to show details : '
       id = gets.chomp.to_i
