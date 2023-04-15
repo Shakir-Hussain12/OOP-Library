@@ -1,10 +1,16 @@
 require './person'
-require './trim_decorator'
-require './cap_decorator'
+require './rental'
+require './book'
+require './classroom'
+require './student'
 
 person = Person.new(22, 'maximilianus')
-puts "Original Input :  #{person.correct_name}"
-capitalized_person = Capitalize.new(person)
-puts "Capitalized Name : #{capitalized_person.correct_name}"
-capitalized_trimmed_person = Trim.new(capitalized_person)
-puts "Trimmed Name : #{capitalized_trimmed_person.correct_name}"
+book = Book.new('The First Book', 'Shakir')
+Rental.new('03/04/2023', book, person)
+
+puts "Person Rentals : #{person.rentals}"
+puts "Book Rentals : #{book.rentals}"
+
+classroom = Classroom.new('2B')
+Student.new(classroom, 16, 'Taha')
+puts "Classroom Students : #{classroom.students}"
